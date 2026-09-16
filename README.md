@@ -577,44 +577,15 @@ Dashed arrows indicate additional processes performed in parallel with character
   ```
     python ./detection/test.py --model ./detection/models/YOLO11L_SDA.pt --data ./dataset/meta_aug.yaml
   ```
-  
-## ② Document Restoration
-* The document restoration results are as follows:
-  
-  | τ<sub>r</sub> | (τ<sub>rg</sub>,τ<sub>rb</sub>) | PSNR<sub>Valid</sub> | SSIM<sub>Valid</sub> | PSNR<sub>Test</sub> | SSIM<sub>Test</sub> |
-  | :--: | :--: | :--: | :--: | :--: | :--: |
-  | -  | -   | 29.15dB | 0.9655 | 28.71dB | 0.9639 |
-  | 80 | 1.2 | 29.76dB | 0.9470 | 29.61dB | 0.9465 |
-  | 80 | 1.3 | 33.64dB | 0.9736 | 33.73dB | 0.9731 |
-  | 80 | 1.4 | 33.87dB | 0.9756 | 33.77dB | 0.9745 |
-  | 80 | 1.5 | 31.97dB | 0.9717 | 31.68dB | 0.9706 |
-  | 90 | 1.2 | 30.37dB | 0.9522 | 30.19dB | 0.9519 |
-  | 90 | 1.3 | **34.09dB** | 0.9757 | **34.13dB** | 0.9750 |
-  | 90 | 1.4 | 34.05dB | **0.9763** | 33.94dB | **0.9753** |
-  | 90 | 1.5 | 32.03dB | 0.9721 | 31.74dB | 0.9710 |
-
-* Visual examples of document restoration results obtained with the parameters τ<sub>r</sub> = 90 and τ<sub>rg</sub> = τ<sub>rb</sub> = 1.3 are shown below:
-  <p align="left">
-    <img src="img/fig_restoration.png" width="640" title="details">
-  </p>
-
-### Run
-* You can run document restoration with `r_min = 90` and `rg_ratio = rb_ratio = 1.3` as follows:
-  ```
-    python ./restoration/run.py --input_dir ./dataset/images/test_aug --output_dir ./restoration/output --r_min 90 --rg_ratio 1.3 --rb_ratio 1.3 --max_workers 6
-  ```
-
-### Evaluate
-* For the synthetic image, the ground truth is the corresponding real image.
-* You can evaluate using `PSNR` and `SSIM` as follows:
-  ```
-    python ./restoration/evaluate.py --gt_dir ./dataset/images/test_aug --pred_dir ./restoration/output --output_csv ./restoration/output_csv
-  ```
 
 ## ③ Character Cropping
 * To extract individual Kuzushiji character instances, we crop each character region based on the predicted bounding boxes:
   ```
-    python ./crop/run.py --image_dir ./restoration/output --labels_dir ./detection/runs/detect/test_YOLO11L_SDA/labels --save_root ./crop/output
+    python ./crop/run.py --image_dir ./dataset/images/test_aug --labels_dir ./detection/runs/detect/test_YOLO11L_SDA_Real/labels --save_root ./crop/output_real
+  ```
+
+  ```
+    python ./crop/run.py --image_dir ./dataset/images/test_aug --labels_dir ./detection/runs/detect/test_YOLO11L_SDA_Synthetic/labels --save_root ./crop/output_synthetic
   ```
 
 ## ④ Character Classification
