@@ -1,5 +1,5 @@
-# Seal-Robust KCR
-Seal-Robust KCR: A Robust Kuzushiji Character Recognition Framework under Seal Interference
+# Kuzushiji Character Recognition
+A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historical Documents
 >[arXiv](https://arxiv.org/abs/2602.19086)
 >[Project](https://ruiyangju.github.io/Seal-Robust-KCR/)
 
