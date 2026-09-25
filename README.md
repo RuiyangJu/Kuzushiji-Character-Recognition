@@ -472,9 +472,9 @@ A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historic
 
     | Set | #Pages@Real | Avg. Seal/Page@Real | #Pages@Synth. | Avg. Seal/Page@Synth. | Total Pages |
     | :--- | :--: | :--: | :--: | :--: | :--: |
-    | Train | 800 | 0–2 | 800 | ≈10 | 1,600 |
-    | Validation | 100 | 0–2 | 100 | ≈10 | 200 |
-    | Real Test | 100 | 0–2 | — | — | 100 |
+    | Train | 800 | ≤2 | 800 | ≈10 | 1,600 |
+    | Validation | 100 | ≤2 | 100 | ≈10 | 200 |
+    | Real Test | 100 | ≤2 | — | — | 100 |
     | Synth. Test | — | — | 100 | ≈10 | 100 |
   
 # Experiments
