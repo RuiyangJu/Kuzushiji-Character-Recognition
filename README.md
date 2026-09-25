@@ -1,7 +1,7 @@
 # Kuzushiji Character Recognition
 A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historical Documents
 >[arXiv](https://arxiv.org/abs/2602.19086)
->[Project](https://ruiyangju.github.io/Seal-Robust-KCR/)
+>[Project](https://ruiyangju.github.io/KuzushijiOCR/)
 
   <p align="left">
     <img src="img/fig_pipeline.png" width="1024" title="details">
