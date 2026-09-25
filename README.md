@@ -559,13 +559,13 @@ A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historic
 * Put them in `./detection/models/`.
 
 ### Test on Real Test Set:
-* You can test the model on real test set as follows:
+* You can test the model on the Real Test Set as follows:
   ```
     python ./detection/test.py --model ./detection/models/YOLO11L_SDA.pt --data ./dataset/meta_raw.yaml
   ```
 
 ### Test on Synthetic Test Set:
-* You can test the model on synthetic test set as follows:
+* You can test the model on Synthetic Test Set as follows:
   ```
     python ./detection/test.py --model ./detection/models/YOLO11L_SDA.pt --data ./dataset/meta_aug.yaml
   ```
