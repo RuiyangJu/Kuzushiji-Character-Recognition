@@ -10,15 +10,12 @@ A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historic
 # End-to-end Kuzushiji Character Recognition
 * The end-to-end KCR results (from image to text) are compared as follows:
 
-  | Method | CER@Real (%) | Speed@Real (FPS) | Peak GPU Memory@Real (GB) | CER@Synth. (%) | Speed@Synth. (FPS) | Peak GPU Memory@Synth. (GB) |
-  |:--|:--:|:--:|:--:|:--:|:--:|:--:|
-  | NDLkotenOCR-Lite | 21.76 | 0.40 | — | 47.82 | 0.35 | — |
-  | NDLkotenOCR | 12.73 | **0.51** | 7.52 | 23.43 | 0.37 | 16.20 |
-  | Baseline | 19.86 | 0.37 | 2.81 | 27.41 | 0.35 | 2.81 |
-  | **Seal-Robust KCR** | **11.98** | 0.41 | 2.81 | **13.67** | **0.39** | 2.81 |
-  
-* All above evaluations were conducted on an NVIDIA RTX A5000 GPU and an Intel Core i5-11600K CPU.
-* NDLkotenOCR-Lite was evaluated using CPU-based inference and therefore does not require GPU memory.
+  | Method | CER@Real (%) | CER@Synth. (%) | CER@OOD (%) |
+  |:--|:--:|:--:|:--:|
+  | NDLkotenOCR-Lite | 21.76 | 47.82 | 27.84 |
+  | NDLkotenOCR | 12.73 | 23.43 | 22.64 |
+  | Baseline | 19.85 | 27.42 | 20.66 |
+  | **Seal-Robust KCR** | **11.22** | **14.80** | **12.58** |
 
 ## Environment
   ```
