@@ -4,7 +4,7 @@ A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historic
 >[Project](https://ruiyangju.github.io/Seal-Robust-KCR/)
 
   <p align="left">
-    <img src="img/fig_teaser.png" width="512" title="details">
+    <img src="img/fig_pipeline.png" width="1024" title="details">
   </p>
 
 # End-to-end Kuzushiji Character Recognition
@@ -44,14 +44,6 @@ A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historic
 ```
   streamlit run run_app.py
 ```
-  
-# Pipeline
-* Conventional pipeline (blue flow) and the proposed pipeline (red flow) for seal-interference Kuzushiji document images.
-Dashed arrows indicate additional processes performed in parallel with character detection without affecting the detection results.
-
-  <p align="left">
-    <img src="img/fig_pipeline.png" width="1024" title="details">
-  </p>
 
 # Citation
 * If you find our paper useful in your research, please consider citing:
