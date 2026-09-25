@@ -611,7 +611,7 @@ A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historic
 
 ## ④ Character Ordering
   <p align="left">
-    <img src="img/fig_ordering.png" width="1024" title="details">
+    <img src="img/fig_ordering.png" width="640" title="details">
   </p>
   
 ### Run
