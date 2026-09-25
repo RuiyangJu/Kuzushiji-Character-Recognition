@@ -570,7 +570,7 @@ A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historic
     python ./detection/test.py --model ./detection/models/YOLO11L_SDA.pt --data ./dataset/meta_aug.yaml
   ```
 
-## ③ Character Cropping
+## ② Character Cropping
 * To extract individual Kuzushiji character instances, we crop each character region based on the predicted bounding boxes:
   ```
     python ./crop/run.py --image_dir ./dataset/images/test_aug --labels_dir ./detection/runs/detect/test_YOLO11L_SDA_Real/labels --save_root ./crop/output_real
@@ -580,7 +580,7 @@ A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historic
     python ./crop/run.py --image_dir ./dataset/images/test_aug --labels_dir ./detection/runs/detect/test_YOLO11L_SDA_Synthetic/labels --save_root ./crop/output_synthetic
   ```
 
-## ④ Character Classification
+## ③ Character Classification
 * The character classification results are as follows:
 
   | Method | Top-1 Acc. | Top-5 Acc. | Speed@A5000 | Speed@PRO 6000 |
@@ -607,7 +607,7 @@ A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historic
     python ./classification/evaluate.py --gt_dir ./classification/gt --pred_dir ./classification/output
   ```
 
-## ⑤ Character Ordering
+## ④ Character Ordering
 * We compare our proposed method with [LightGBM](https://github.com/lightgbm-org/LightGBM) on character ordering, and the results are shown below:
   
   | Method | Training | CER | FPS |
@@ -628,6 +628,17 @@ A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historic
 * You can download the ground truth [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCQBKNHucC0SZAQDXpORyKlAY-pUSEMAv77RLDIXC_DXYM?e=eRD2az). Please put the ground truth in `./ordering/` and name the folder as `gt`.
   ```
     python ./ordering/evaluate.py --gt_dir ./ordering/gt --pred_dir ./ordering/output_ours --out_csv ./ordering/output_ours_csv
+  ```
+
+## ⑤ Post-OCR Correction
+### Inference
+* API-based GPT Models
+  ```
+  export OPENAI_API_KEY="sk-proj-yourkey"
+  python run_gpt.py \
+    --model gpt-5.5 \
+    --input-dir path/to/input \
+    --output-dir path/to/output
   ```
 
 ## ⑥ Visualization (Optional)
