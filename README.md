@@ -77,9 +77,11 @@ A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historic
 ## ② Data Correction
 * Among the **1,000** annotated images, we found that **267** images contained incomplete annotations.
 * As shown below, the red bounding boxes are annotated by us, while the green bounding boxes are from the original annotations:
+
   <p align="left">
     <img src="img/fig_correction.png" width="640" title="details">
   </p>
+  
 * These missing labels were manually corrected, and the corresponding image names are listed below:
 
   <table>
@@ -608,9 +610,13 @@ A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historic
   ```
 
 ## ④ Character Ordering
-* We compare our proposed method with [LightGBM](https://github.com/lightgbm-org/LightGBM) on character ordering, and the results are shown below:
+  
+    <p align="left">
+      <img src="img/fig_ordering.png" width="640" title="details">
+    </p>
   
 ### Run
+* We compare our proposed method with [LightGBM](https://github.com/lightgbm-org/LightGBM) on character ordering.
 * You can run both methods for character ordering as follows:
   ```
     python ./ordering/run_ours.py --input_dir ./classification/output_xxx --output_dir ./ordering/output_ours_xxx
