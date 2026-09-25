@@ -19,8 +19,8 @@ A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historic
 
 ## Environment
   ```
-    conda create -n sealrobustkcr python=3.10
-    conda activate sealrobustkcr
+    conda create -n kuzushijiocr python=3.10
+    conda activate kuzushijiocr
     pip install -r requirements.txt
   ```
 
