@@ -500,10 +500,10 @@ A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historic
     | + SDA (Ours) | 26.39M | 82.1G | 97.5% | **93.6%** | <u>**96.5%**</u> | **83.2%** | **97.5%** | **92.8%** | **96.3%** | **81.9%** |
 
 ### Train:
-* Make ensure that the dataset is placed under `Seal-Robust-KCR/dataset` and organized as follows:
+* Make ensure that the dataset is placed under `Kuzushiji-Character-Recognition/dataset` and organized as follows:
 
   ```
-    Seal-Robust-KCR
+    Kuzushiji-Character-Recognition
     └── dataset
         ├── meta_raw.yaml
         ├── meta_aug.yaml
