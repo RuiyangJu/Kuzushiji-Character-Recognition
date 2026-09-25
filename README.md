@@ -647,7 +647,7 @@ A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historic
     python visual.py --image path/to/restored_image.jpg --json /path/to/classification_results.json --out ./visualization.jpg --font_size 64
   ```
   
-  <p align="center">
+  <p align="left">
     <img src="img/fig_visualization.png" width="1024" title="details">
   </p>
   
