@@ -45,7 +45,7 @@ A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historic
 # Citation
 * If you find our paper useful in your research, please consider citing:
   ```
-    @article{ju2026seal,
+    @article{ju2026multistage,
       title={A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historical Documents},
       author={Ju, Rui-Yang and Yamashita, Kohei and Kameko, Hirotaka and Mori, Shinsuke},
       journal={arXiv preprint arXiv:2602.19086},
