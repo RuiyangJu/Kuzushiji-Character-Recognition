@@ -610,10 +610,9 @@ A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historic
   ```
 
 ## ④ Character Ordering
-  
-    <p align="left">
-      <img src="img/fig_ordering.png" width="640" title="details">
-    </p>
+  <p align="left">
+    <img src="img/fig_ordering.png" width="1024" title="details">
+  </p>
   
 ### Run
 * We compare our proposed method with [LightGBM](https://github.com/lightgbm-org/LightGBM) on character ordering.
