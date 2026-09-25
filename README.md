@@ -470,7 +470,7 @@ A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historic
 * Notably, if you want to combine both the **real** and **synthetic** datasets for model training/validation/testing, please make sure that the image names across the two datasets are **different**.
 * Therefore, the statistics of the dataset used in this work are summarized as follows:
 
-    | Set | #Pages@Real | Avg. Seal/Page@Real | #Pages@Synth. | Avg. Seal/Page@Synth. | Total Pages |
+    | Set | #Pages@Real | Seal/Page@Real | #Pages@Synth. | Seal/Page@Synth. | Total Pages |
     | :--- | :--: | :--: | :--: | :--: | :--: |
     | Train | 800 | ≤2 | 800 | ≈10 | 1,600 |
     | Validation | 100 | ≤2 | 100 | ≈10 | 200 |
