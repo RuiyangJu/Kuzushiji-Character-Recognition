@@ -74,8 +74,6 @@ A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historic
     | 13 | 200022050 | Ryouri Hiden-shou (料理秘伝抄) | 24 | 9,558 | 398.3 |
     | Total | N/A | N/A | 1,000 | 208,482 | 208.5 |
 
-* Accordingly, we selected the **1,000** annotated images listed above as the benchmark dataset.
-
 ## ② Data Correction
 * Among the **1,000** annotated images, we found that **267** images contained incomplete annotations.
 * As shown below, the red bounding boxes are annotated by us, while the green bounding boxes are from the original annotations:
