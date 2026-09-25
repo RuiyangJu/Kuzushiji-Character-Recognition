@@ -46,7 +46,7 @@ A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historic
 * If you find our paper useful in your research, please consider citing:
   ```
     @article{ju2026seal,
-      title={Seal-Robust KCR: A Robust Kuzushiji Character Recognition Framework under Seal Interference},
+      title={A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historical Documents},
       author={Ju, Rui-Yang and Yamashita, Kohei and Kameko, Hirotaka and Mori, Shinsuke},
       journal={arXiv preprint arXiv:2602.19086},
       year={2026}
@@ -466,7 +466,7 @@ A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historic
   <p align="left">
     <img src="img/fig_synthetic.png" width="640" title="details">
   </p>
-* You can download the **synthetic dataset** through synthetic data augmentation (train + valid + test) [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCkDlP7XG_rS6xpc1Kgbt_7Aaw8cbbKyWJLVW6dbljB69k).
+* You can download the **synthetic** dataset generated through synthetic data augmentation (train + valid + test) [here]. [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgCkDlP7XG_rS6xpc1Kgbt_7Aaw8cbbKyWJLVW6dbljB69k).
 * Notably, if you want to combine both the **real** and **synthetic** datasets for model training/validation/testing, please make sure that the image names across the two datasets are **different**.
 * Therefore, the statistics of the dataset used in this work are summarized as follows:
 
@@ -591,7 +591,7 @@ A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historic
 * We use [Metom](https://codh.rois.ac.jp/char-shape/app/metom/) for character classification. The official source code is available on [Hugging Face](https://huggingface.co/SakanaAI/Metom).
 
 ### Run
-* You can run character classification as follows：
+* You can run character classification as follows:
 * The Metom model will be downloaded automatically and stored in `./classification/models/Metom`.
   ```
     python ./classification/run.py --root_dir ./crop/output_real/crops --out_dir ./classification/output_real --batch_size 1280
@@ -639,7 +639,7 @@ A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historic
 ## ⑥ Visualization (Optional)
 * After running the character classification to generate the `.json` file, you can visualize the prediction results by projecting them onto the restored document image using the following command:
   ```
-    python visual.py --image path/to/restored_image.jpg --json /path/to/classification_results.json --out ./visutalization.jpg --font_size 64
+    python visual.py --image path/to/restored_image.jpg --json /path/to/classification_results.json --out ./visualization.jpg --font_size 64
   ```
   
   <p align="center">
