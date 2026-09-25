@@ -500,7 +500,7 @@ A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historic
     | + SDA (Ours) | 26.39M | 82.1G | 97.5% | **93.6%** | <u>**96.5%**</u> | **83.2%** | **97.5%** | **92.8%** | **96.3%** | **81.9%** |
 
 ### Train:
-* Make ensure that the dataset is placed under `Kuzushiji-Character-Recognition/dataset` and organized as follows:
+* Make sure that the dataset is placed under `Kuzushiji-Character-Recognition/dataset` and organized as follows:
 
   ```
     Kuzushiji-Character-Recognition
@@ -541,7 +541,7 @@ A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historic
     path: '/path/to/data'
     train: 'images/train'
     val: 'images/valid'
-    test: 'images/test' # 'images/test_raw' or 'images/test_aug'
+    test: 'images/test_xxx' # 'images/test_raw' or 'images/test_aug' or 'images/test_ood'
     
     nc: 1
     names:
@@ -573,7 +573,7 @@ A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historic
 ## ② Character Cropping
 * To extract individual Kuzushiji character instances, we crop each character region based on the predicted bounding boxes:
   ```
-    python ./crop/run.py --image_dir ./dataset/images/test_aug --labels_dir ./detection/runs/detect/test_YOLO11L_SDA_Real/labels --save_root ./crop/output_real
+    python ./crop/run.py --image_dir ./dataset/images/test_raw --labels_dir ./detection/runs/detect/test_YOLO11L_SDA_Real/labels --save_root ./crop/output_real
   ```
 
   ```
@@ -583,10 +583,10 @@ A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historic
 ## ③ Character Classification
 * The character classification results are as follows:
 
-  | Method | Top-1 Acc. | Top-5 Acc. | Speed@A5000 | Speed@PRO 6000 |
-  | :--: | :--: | :--: | :--: | :--: |
-  | Baseline (Metom) | 94.22% | 97.64% | 1.19FPS | 4.76FPS |
-  | + Rest. (Ours) | 95.66% | 98.62% | 1.19FPS | 4.76FPS |
+    | Test Set | Top-1 Acc. | Top-5 Acc. |
+    | :--: | :--: | :--: |
+    | Real Test Set | 97.40% | 99.38% |
+    | Synthetic Test Set | 93.93% | 97.48% |
   
 * We use [Metom](https://codh.rois.ac.jp/char-shape/app/metom/) for character classification. The official source code is available on [Hugging Face](https://huggingface.co/SakanaAI/Metom).
 
@@ -604,24 +604,19 @@ A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historic
 ### Evaluate
 * You can download the ground truth [here](https://1drv.ms/f/c/56c255dd1bb9ae9e/IgDDpS626Jn_RqpJcP7bLY2OARZmbqVZtbsxw1OqcD_Rhxw?e=eBhF2z). Please put the ground truth in `./classification/` and name the folder as `gt`.
   ```
-    python ./classification/evaluate.py --gt_dir ./classification/gt --pred_dir ./classification/output
+    python ./classification/evaluate.py --gt_dir ./classification/gt --pred_dir ./classification/output_xxx
   ```
 
 ## ④ Character Ordering
 * We compare our proposed method with [LightGBM](https://github.com/lightgbm-org/LightGBM) on character ordering, and the results are shown below:
   
-  | Method | Training | CER | FPS |
-  | :--: | :--: | :--: | :--: |
-  | LightGBM | Yes | 21.25 | 15.38 |
-  | Ours | No | **13.67** | **419.27** |
-
 ### Run
 * You can run both methods for character ordering as follows:
   ```
-    python ./ordering/run_ours.py --input_dir ./classification/output --output_dir ./ordering/output_ours
+    python ./ordering/run_ours.py --input_dir ./classification/output_xxx --output_dir ./ordering/output_ours_xxx
   ```
   ```
-    python ./ordering/run_lgbm.py --input_dir ./classification/output --output_dir ./ordering/output_lgbm
+    python ./ordering/run_lgbm.py --input_dir ./classification/output_xxx --output_dir ./ordering/output_lgbm_xxx
   ```
 
 ### Evaluate
