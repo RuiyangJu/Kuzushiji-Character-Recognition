@@ -7,7 +7,7 @@ A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historic
     <img src="img/fig_pipeline.png" width="1024" title="details">
   </p>
 
-# End-to-end Kuzushiji Character Recognition
+# Kuzushiji Character Recognition Performance
 * The end-to-end KCR results (from image to text) are compared as follows:
 
   | Method | CER@Real (%) | CER@Synth. (%) | CER@OOD (%) |
