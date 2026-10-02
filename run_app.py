@@ -95,7 +95,7 @@ def find_classification_json():
 
 
 st.set_page_config(
-    page_title="Seal-Robust KCR Demo",
+    page_title="Kuzushiji OCR Demo",
     layout="wide"
 )
 
@@ -125,15 +125,15 @@ div.stButton > button:active {
 </style>
 """, unsafe_allow_html=True)
 
-st.title("Seal-Robust Kuzushiji Character Recognition")
+st.title("A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historical Documents")
 
 st.info(
     """
-    This application provides an online demonstration of Seal-Robust KCR.
+    This application provides an online demonstration of Kuzushiji OCR.
     The detailed implementation and source code are available on our
-    [Project Page](https://ruiyangju.github.io/Seal-Robust-KCR)
+    [Project Page](https://ruiyangju.github.io/KuzushijiOCR)
     and
-    [GitHub Repository](https://github.com/RuiYangJu/Seal-Robust-KCR).
+    [GitHub Repository](https://github.com/RuiyangJu/Kuzushiji-Character-Recognition).
     """
 )
 
