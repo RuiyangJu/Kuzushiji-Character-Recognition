@@ -15,7 +15,7 @@ A Multi-Stage Framework for Kuzushiji Character Recognition in Japanese Historic
   | NDLkotenOCR-Lite | 21.76 | 47.82 | 27.84 |
   | NDLkotenOCR | 12.73 | 23.43 | 22.64 |
   | Baseline | 19.85 | 27.42 | 20.66 |
-  | **Seal-Robust KCR** | **11.22** | **14.80** | **12.58** |
+  | **Our Method** | **11.22** | **14.80** | **12.58** |
 
 ## Environment
   ```
