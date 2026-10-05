@@ -111,7 +111,7 @@ ORDER_OUTPUT="./ordering/output_ours"
 ORDER_CSV="./evaluation_results"
 
 
-echo "Seal-Robust-KCR Inference Pipeline"
+echo "Kuzushiji OCR Pipeline"
 echo "Test Set: ${TEST_SET}"
 echo "Dataset YAML: ${DATA_YAML}"
 echo "Evaluation: ${RUN_EVAL}"
